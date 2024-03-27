@@ -7,7 +7,7 @@ import java.util.List;
 /** 51. N 皇后 */
 public class Q51 {
     public static void main(String[] args) {
-        List<List<String>> lists = solveNQueens(4);
+        List<List<String>> lists = solveNQueens(8);
         System.out.println(lists);
     }
 
@@ -26,7 +26,11 @@ public class Q51 {
      * @param row  当前第几行
      * @param n    总共有几行
      */
-    static void backtracking(List<List<String>> res, int[][] path, int row, int n) {
+    static void backtracking(
+            List<List<String>> res,
+            int[][] path,
+            int row, int n
+    ) {
         // 最后一行
         if (row == n) {
             // 转换、存储结果
